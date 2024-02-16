@@ -1,44 +1,82 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Drugs</title>
+    <title>MyDrugs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
+            background-color: #232f3e;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #f4f4f4;
+            background-color: #007bff;
             padding: 10px;
+            text-align: center;
         }
         nav ul {
             list-style-type: none;
-            margin: 0;
             padding: 0;
-            text-align: center;
+            margin: 0;
         }
         nav ul li {
             display: inline;
-            margin-right: 10px;
+            margin-right: 20px;
         }
         nav ul li a {
+            color: #fff;
             text-decoration: none;
-            color: #333;
         }
         section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             padding: 20px;
         }
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            width: 40%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .add-to-cart:hover {
+            background-color: #004080;
+        }
         footer {
-            background-color: #333;
+            background-color: #232f3e;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -47,207 +85,76 @@
 </head>
 <body>
 
+<header>
+    <h1>Welcome to MyDrugs</h1>
+</header>
 
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shopping-cart.html">Shopping Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+    </ul>
 </nav>
-</ul>
-</nav>
-<ul>
- 
 
-
-
-  <header>
-
-    <h1>My Drugs</h1>
-
-  </header>
-</nav>
-<ul>
-    <li><a href="#Order">How to Order</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
-
-
-</nav>
-<style>
-  .faq-answer {
-    display: none;
-  }
-</style>
-<section id="faq">
-  <h2>Frequently Asked Questions</h2>
-  <h3>General Questions</h3>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFaq(this)">What happens with my data?</button>
-    <div class="faq-answer">After we ship out your order your data will be deleted from our Computer.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFaq(this)">How long does it take till my order arrives?</button>
-    <div class="faq-answer">Shipping is usually 3-5 bussines days.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFaq(this)">Are the drugs dangerous?</button>
-    <div class="faq-answer">If you dont have experience we recommend to be careful and to inform yourself so that nothing happens.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFaq(this)">How can i order without the package arriving at my private adress?</button>
-    <div class="faq-answer">We can deliver your order at any package station just tell us the adress of the packstation instead of your private adress.</div>
-  </div>
+<section>
+    <div class="product">
+        <img src="yz3hd3osap331.jpg" alt="MDMA">
+        <h2>MDMA </h2>
+        <p>MDMA Blue Maybach 5x 300mg </p>
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="MDMA Blue Maybach 5x 300mg" data-price="10">Add to Shopping Cart</button>
+    </div>
+    <div class="product">
+        <img src="65bccbc56478240b46496fc8_bild1-p-800.jpg" alt="MDMA">
+        <h2>MDMA</h2>
+        <p>MDMA Phllip Plein 25x 300mg</p>
+        <p>Price: $40</p>
+        <button class="add-to-cart" data-name="MDMA Phllip Plein 25x 300mg" data-price="40">Add to Shopping Cart</button>
+    </div>
+    <div class="product">
+        <img src="marijuana-454601963-resized-569fd2345f9b58eba4ad583d.jpg" alt="Marihuana">
+        <h2>Marihuana</h2>
+        <p>Marihuana (1 gramm)</p>
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Marihuana (1 gramm)" data-price="10">Add to Shopping Cart</button>
+    </div>
+    <div class="product">
+        <img src="Screen-Shot-2021-07-16-at-16.00.53.jpg" alt="Crystal Meth">
+        <h2>Crystal Meth</h2>
+        <p>Crystal Meth high-quality clean shards (1 gramm)</p>
+        <p>Price: $40</p>
+        <button class="add-to-cart" data-name="Crystal Meth high-quality clean shards (1 gramm)" data-price="40">Add to Shopping Cart</button>
+    </div>
+    <div class="product">
+        <img src="il.srgssr.jpg" alt="Cocaine">
+        <h2>Cocaine</h2>
+        <p>Pure Colombian Cocaine 91% (1 gramm)</p>
+        <p>Price: $70</p>
+        <button class="add-to-cart" data-name="Pure Colombian Cocaine 91% (1 gramm)" data-price="70">Add to Shopping Cart</button>
+    </div>
 </section>
-<script>
-  function toggleFaq(button) {
-    const answer = button.nextElementSibling;
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
-    
-  <main>
-
-    <section id="products">
-
-      <h2>Products</h2>
-
-      <div id="products-container">
-        <div class="product-item">
-           <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
-</head>
-<body>
-    <img src="il.srgssr.jpg" alt="Cocaine" width="300" height="200">
-</body>
-</html>
-            <h3>Pure Colombian Cocaine 91%</h3>
-            <p>70 USD per gramm ( 600 USD for 10 gramm) (5000 USD for 100 gramm)</p>
-    </div>
-    
-    </div>
-    
-        </div>
-        </div>
-        <div class="product-item">
-           <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
-</head>
-<body>
-    <img src="marijuana-454601963-resized-569fd2345f9b58eba4ad583d.jpg" alt="Marihuana" width="300" height="200">
-</body>
-</html>
-            <h3>Marihuana</h3>
-            <p>12 USD per gramm (100 USD for 10 gramm) (800 USD for 100 gramm)</p>
-            
-        </div>
-        </div>
-        <div class="product-item">
-           <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
-</head>
-<body>
-    <img src="yz3hd3osap331.jpg" alt="MDMA" width="300" height="200">
-</body>
-</html>
-            <h3>MDMA Blue Maybach 5x 300mg </h3>
-            <p>10 USD (80 USD for 50x) ( 700 USD for 500x)</p>
-
-           
-    </div>
-        </div>
-        <div class="product-item">
-           <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
-</head>
-<body>
-    <img src="65bccbc56478240b46496fc8_bild1-p-800.jpg" alt="MDMA" width="300" height="200">
-</body>
-</html>
-            <h3>MDMA Phllip Plein 25x 300mg </h3>
-            <p>40 USD (300 USD for 250x) ( 2500 USD for 2500x)</p>
-       
-       
-       
-       
-       
-       
-       
-       
-        </div>
-        </div>
-        <div class="product-item">     
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Example</title>
-</head>
-<body>
-    <img src="Screen-Shot-2021-07-16-at-16.00.53.jpg" alt="Crystal Meth" width="300" height="200">
-</body>
-</html>
-         
-            <h3>Crystal Meth high-quality clean shards</h3>
-            <p>40 USD per gramm (300USD for 10 gramm) (2500 USD for 100 gramm)</p>
-
-
-
-
-   
-   
-   
-   
-    <main>
-   
-   
-   
-   
-        <h2 id="Order">How to Order</h2>
-        <p> To order send the USD amount for the product and quantity you want in Bitcoin to this Bitocin adress:"bc1qktkfd3e2ma3z762yf3q8tyx4atg28wvnxan86c" make a screenshot of the payment and send it to My_Drugs.shop99@proton.me and tell us your Name, Adress, Zip code, city, and country so that we can ship your order. (if you dont have a Bitcoin wallet  go on this website:https://changenow.io/?from=eur&to=ltc&fiatMode=true)
-        </p>
-        <h2 id="about">About Us</h2>
-        <p>Our Team is dedicated to providing high-quality drugs for a good price. Our team is committed to ensuring customer satisfaction and meeting their needs</p>
-        <h2 id="services">Our Services</h2>
-        <p>We offer Cocaine, Marihuana, MDMA and Crystal meth. Payment via Bitcoin (you don't need a wallet ). Worldwide free shipping. You can order individual quantity doesnt have to be a quantity you can see above. Just contact us and say how much you want ;)</p>
-        <h2 id="contact">Contact Us</h2>
-        <p>Please don't hesitate to contact us with any questions or inquiries. We look forward to hearing from you!</p>
-    </main>
-
-
-
 
 <footer>
-    <p>&copy; 2024 My Drugs</p>
+    <p>&copy; 2024 MyDrugs</p>
 </footer>
+
+<script>
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+            const item = { name, price };
+            let cart = sessionStorage.getItem('cart');
+            cart = cart ? JSON.parse(cart) : [];
+            cart.push(item);
+            sessionStorage.setItem('cart', JSON.stringify(cart));
+            alert('The product has been added to the cart!');
+        });
+    });
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
